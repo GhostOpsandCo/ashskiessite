@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { SiteContentProvider } from './components/SiteContentContext';
-import { EditModePanel } from './components/EditModePanel';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { FeaturedWork } from './components/FeaturedWork';
@@ -65,7 +64,6 @@ export default function App() {
       <div className="min-h-screen bg-white">
         <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
         {renderPage()}
-        <EditModePanel />
       </div>
     </SiteContentProvider>
   );
