@@ -1,0 +1,86 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Smooth scrolling and custom styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ── Edit Mode Styles ──────────────────────────────────────────── */
+
+.editable-text {
+  position: relative;
+  transition: outline 0.15s ease;
+  outline: 2px dashed transparent;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.editable-text:hover {
+  outline-color: rgba(59, 130, 246, 0.5);
+}
+
+.editable-text:focus {
+  outline-color: rgba(59, 130, 246, 0.8);
+}
+
+.editable-image-wrap {
+  cursor: pointer;
+}
+
+.editable-image-wrap:hover .editable-image-hint {
+  opacity: 1 !important;
+}
+
+/* Edit panel buttons */
+.edit-panel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.edit-panel-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.edit-panel-label {
+  font-size: 0.65rem;
+}
