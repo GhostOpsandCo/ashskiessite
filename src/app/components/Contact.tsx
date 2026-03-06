@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, MapPin, Instagram, Twitter } from 'lucide-react';
+import { Mail, MapPin, Instagram, Twitter, Youtube, Tv, Link } from 'lucide-react';
 import { EditableText } from './EditableText';
 import { useSiteContent } from './SiteContentContext';
 
@@ -84,7 +84,17 @@ export function Contact() {
               >
                 Follow Me
               </div>
-              <div className="flex gap-6">
+              <div className="flex gap-4">
+                <motion.a
+                  href="https://www.youtube.com/@itsashleighxoxo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                >
+                  <Youtube className="w-5 h-5" />
+                </motion.a>
                 <motion.a
                   href="https://www.instagram.com/itsashleighxoxo/"
                   target="_blank"
@@ -94,6 +104,26 @@ export function Contact() {
                   className="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
                 >
                   <Instagram className="w-5 h-5" />
+                </motion.a>
+                <motion.a
+                  href="https://link.me/itsashleighxoxo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                >
+                  <Link className="w-5 h-5" />
+                </motion.a>
+                <motion.a
+                  href="https://www.twitch.tv/Pintsizexo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                >
+                  <Tv className="w-5 h-5" />
                 </motion.a>
                 <motion.a
                   href="https://x.com/itsashleighxxoo"

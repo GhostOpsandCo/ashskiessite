@@ -62,24 +62,8 @@ export function Instagram() {
                 src={IG_PHOTOS[index]}
                 alt={`Instagram post ${n}`}
                 draggable={false}
-                className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-70"
+                className="w-full h-full object-cover"
               />
-
-              {/* Hover Overlay */}
-              <div
-                className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                style={{ pointerEvents: isEditMode ? 'none' : 'auto' }}
-              >
-                <div className="flex items-center gap-2 text-white">
-                  <Heart className="w-6 h-6 fill-white" />
-                  <EditableText
-                    contentKey={`ig.${n}.likes`}
-                    as="span"
-                    className="text-lg"
-                    style={{ fontFamily: 'var(--font-sans)' }}
-                  />
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
