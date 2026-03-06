@@ -86,7 +86,9 @@ export function Contact() {
               </div>
               <div className="flex gap-6">
                 <motion.a
-                  href="#"
+                  href="https://www.instagram.com/itsashleighxoxo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"
@@ -94,7 +96,9 @@ export function Contact() {
                   <Instagram className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://x.com/itsashleighxxoo"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-12 h-12 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all"

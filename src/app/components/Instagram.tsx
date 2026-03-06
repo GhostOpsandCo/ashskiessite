@@ -83,12 +83,15 @@ export function Instagram() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-center mt-12"
         >
-          <button
+          <a
+            href="https://www.instagram.com/itsashleighxoxo/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-12 py-4 bg-black text-white uppercase tracking-widest text-sm transition-all hover:bg-black/80"
             style={{ fontFamily: 'var(--font-sans)' }}
           >
             <EditableText contentKey="ig.cta" as="span" />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

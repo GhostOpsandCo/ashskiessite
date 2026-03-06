@@ -99,62 +99,18 @@ export function FeaturedWork() {
                   />
                 )}
 
-                {/* Hover info overlay */}
+                {/* Hover overlay */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent transition-opacity duration-500 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'
+                  className={`absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent transition-opacity duration-500 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'
                     }`}
                   style={{ pointerEvents: isEditMode ? 'none' : 'auto' }}
                 />
-
-                {/* Text label on hover */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 p-6 lg:p-8"
-                  style={{ pointerEvents: isEditMode ? 'none' : 'auto' }}
-                >
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      y: hoveredId === item.id ? 0 : 20,
-                      opacity: hoveredId === item.id ? 1 : 0,
-                    }}
-                    transition={{ duration: 0.35 }}
-                  >
-                    <p
-                      className="text-xs tracking-[0.2em] uppercase mb-2 text-white/80"
-                      style={{ fontFamily: 'var(--font-sans)' }}
-                    >
-                      <EditableText contentKey={`featured.${item.id}.category`} as="span" />
-                      {' • '}
-                      <EditableText contentKey={`featured.${item.id}.year`} as="span" />
-                    </p>
-                    <EditableText
-                      contentKey={`featured.${item.id}.title`}
-                      as="h3"
-                      className="text-2xl lg:text-3xl text-white tracking-tight"
-                      style={{ fontFamily: 'var(--font-serif)' }}
-                    />
-                  </motion.div>
-                </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* View All Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-center mt-16"
-        >
-          <button
-            className="inline-flex items-center gap-2 px-12 py-4 border-2 border-black text-black uppercase tracking-widest text-sm transition-all hover:bg-black hover:text-white"
-            style={{ fontFamily: 'var(--font-sans)' }}
-          >
-            <EditableText contentKey="featured.cta" as="span" />
-          </button>
-        </motion.div>
+
       </div>
     </section>
   );

@@ -79,16 +79,16 @@ export const DEFAULT_CONTENT: Record<string, string> = {
   'about.p3':
     '“She is clothed with strength and dignity, and she laughs without fear of the future.” — Proverbs 31:25',
   'about.exp.label': 'Experience',
-  'about.exp.value': '10+ Years',
+  'about.exp.value': '7–8 Years',
   'about.loc.label': 'Based In',
-  'about.loc.value': 'Paris, NYC',
+  'about.loc.value': 'Scottsdale, AZ',
   'about.image':
     'https://images.unsplash.com/photo-1620122830785-a18b43585b44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMHdoaXRlJTIwZmFzaGlvbnxlbnwxfHx8fDE3Njc3ODg3MDd8MA&ixlib=rb-4.1.0&q=80&w=1080',
 
   // Instagram
   'ig.label': 'Follow the Journey',
-  'ig.handle': '@isabellarose',
-  'ig.description': 'Behind the scenes, daily inspiration, and exclusive content',
+  'ig.handle': '@itsashleighxoxo',
+  'ig.description': '• Moments • Perspective • Journey',
   'ig.cta': 'Follow on Instagram',
   'ig.1.image':
     'https://images.unsplash.com/photo-1700150662401-9b96a5fedfbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwbW9kZWwlMjBlZGl0b3JpYWx8ZW58MXx8fHwxNzY3NzgzNTM2fDA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -113,13 +113,13 @@ export const DEFAULT_CONTENT: Record<string, string> = {
   'contact.label': 'Get in Touch',
   'contact.heading': "Let's Create Something Beautiful",
   'contact.description':
-    'Available for campaigns, editorials, runway shows, and brand collaborations. For booking inquiries, please reach out through my management or use the form.',
-  'contact.email': 'bookings@isabellarose.com',
-  'contact.location': 'Paris, France & New York, USA',
+    'I collaborate with brands and creative teams to bring ideas to life through thoughtful storytelling, lifestyle content, and modern marketing. My work sits at the intersection of culture, creativity, and authentic connection.\n\nFor campaign inquiries and partnerships, contact me below.',
+  'contact.email': 'booking@ashleighskies.com',
+  'contact.location': 'Scottsdale, Arizona',
 
   // Footer
-  'footer.logo': 'ISABELLA ROSE',
-  'footer.copyright': '© 2026 Isabella Rose. All rights reserved.',
+  'footer.logo': 'ASHLEIGH SKIES',
+  'footer.copyright': '© 2026 Ashleigh Skies. All rights reserved.',
 };
 
 const STORAGE_KEY = 'ashleigh-skies-site-content';

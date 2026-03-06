@@ -122,19 +122,6 @@ export function Hero() {
               style={{ fontFamily: 'var(--font-sans)' }}
             />
           </motion.div>
-
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group inline-flex items-center gap-3 px-10 py-4 bg-white text-black uppercase tracking-widest text-sm transition-all hover:bg-black hover:text-white border-2 border-white"
-            style={{ fontFamily: 'var(--font-sans)' }}
-          >
-            <EditableText contentKey="hero.cta" as="span" />
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </motion.button>
         </div>
       </div>
 
