@@ -38,7 +38,7 @@ export function FeaturedWork() {
   const { get, isEditMode } = useSiteContent();
 
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section id="portfolio" className="py-24 lg:py-32 bg-white">
       <div className="max-w-[1800px] mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <motion.div

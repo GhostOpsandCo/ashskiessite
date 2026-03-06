@@ -1,32 +1,50 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { EditableText } from './EditableText';
 
-interface NavigationProps {
-  currentPage: string;
-  onNavigate: (page: string) => void;
-}
+const navLinks = [
+  { name: 'Home', id: 'home' },
+  { name: 'Portfolio', id: 'portfolio' },
+  { name: 'About', id: 'about' },
+  { name: 'Contact', id: 'contact' },
+];
 
-export function Navigation({ currentPage, onNavigate }: NavigationProps) {
+export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Determine which section is currently in view
+      const sections = navLinks.map(link => ({
+        id: link.id,
+        el: document.getElementById(link.id),
+      }));
+
+      const scrollY = window.scrollY + 120; // offset for fixed nav
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.el && section.el.offsetTop <= scrollY) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', id: 'home' },
-    { name: 'Portfolio', id: 'portfolio' },
-    { name: 'Editorial', id: 'blog' },
-    { name: 'About', id: 'about' },
-    { name: 'Contact', id: 'contact' },
-  ];
+  const scrollTo = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
     <>
@@ -40,7 +58,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo */}
             <motion.button
-              onClick={() => onNavigate('home')}
+              onClick={() => scrollTo('home')}
               className="relative z-10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -60,13 +78,13 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               {navLinks.map((link) => (
                 <button
                   key={link.id}
-                  onClick={() => onNavigate(link.id)}
+                  onClick={() => scrollTo(link.id)}
                   className={`relative font-sans text-sm tracking-wider uppercase transition-colors ${isScrolled ? 'text-black/80 hover:text-black' : 'text-white/80 hover:text-white'
-                    } ${currentPage === link.id ? 'font-semibold' : ''}`}
+                    } ${activeSection === link.id ? 'font-semibold' : ''}`}
                   style={{ fontFamily: 'var(--font-sans)' }}
                 >
                   {link.name}
-                  {currentPage === link.id && (
+                  {activeSection === link.id && (
                     <motion.div
                       layoutId="activeNav"
                       className={`absolute -bottom-1 left-0 right-0 h-[2px] ${isScrolled ? 'bg-black' : 'bg-white'
@@ -111,7 +129,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => {
-                    onNavigate(link.id);
+                    scrollTo(link.id);
                     setIsMobileMenuOpen(false);
                   }}
                   className="text-white text-3xl font-serif tracking-wider uppercase"
