@@ -7,14 +7,14 @@ import golfPortrait from '../../assets/golf-portrait.jpg';
 export const DEFAULT_CONTENT: Record<string, string> = {
   // Hero
   'hero.tagline': 'Model • Influencer • golfer',
-  'hero.name': 'ASHLEIGH SKIES',
+  'hero.name': 'its ashleigh',
   'hero.description':
-    'Bringing elegance and artistry to every frame. Collaborating with luxury brands to create timeless stories.',
+    'Sharing stories, excitement, and value thru alligned collaboration with brands I trust and audiences I resonate with',
   'hero.cta': 'View Portfolio',
   'hero.bgImage': heroBg,
 
   // Navigation / brand
-  'nav.logo': 'ASHLEIGH SKIES',
+  'nav.logo': 'its ashleigh',
 
   // Featured Work
   'featured.label': 'Featured Work',
@@ -71,7 +71,7 @@ export const DEFAULT_CONTENT: Record<string, string> = {
 
   // About
   'about.label': 'About',
-  'about.heading': 'Ashleigh Skies creator, golfer, and faith-led storyteller.',
+  'about.heading': 'Ashleigh is a creator, golfer, and faith-led storyteller.',
   'about.p1':
     'I built my platform by reinventing myself in real time, choosing growth over comfort and purpose over performance. My content blends golf, lifestyle, personal development, and femininity with a classy, fun, girl-next-door energy that inspires people to level up without losing their joy.',
   'about.p2':
@@ -114,12 +114,12 @@ export const DEFAULT_CONTENT: Record<string, string> = {
   'contact.heading': "Let's Create Something Beautiful",
   'contact.description':
     'I collaborate with brands and creative teams to bring ideas to life through thoughtful storytelling, lifestyle content, and modern marketing. My work sits at the intersection of culture, creativity, and authentic connection.\n\nFor campaign inquiries and partnerships, contact me below.',
-  'contact.email': 'booking@ashleighskies.com',
+  'contact.email': 'booking@itsashleighxoxo.com',
   'contact.location': 'Scottsdale, Arizona',
 
   // Footer
-  'footer.logo': 'ASHLEIGH SKIES',
-  'footer.copyright': '© 2026 Ashleigh Skies. All rights reserved.',
+  'footer.logo': 'its ashleigh',
+  'footer.copyright': '© 2026 itsashleighxoxo. All rights reserved.',
 };
 
 const STORAGE_KEY = 'ashleigh-skies-site-content';
