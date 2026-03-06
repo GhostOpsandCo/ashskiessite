@@ -1,8 +1,15 @@
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
 import { EditableText } from './EditableText';
-import { EditableImage } from './EditableImage';
 import { useSiteContent } from './SiteContentContext';
+import igPhoto1 from '../../assets/ig-photo-1.jpg';
+import igPhoto2 from '../../assets/ig-photo-2.jpg';
+import igPhoto3 from '../../assets/ig-photo-3.jpg';
+import igPhoto4 from '../../assets/ig-photo-4.jpg';
+import igPhoto5 from '../../assets/ig-photo-5.jpg';
+import igPhoto6 from '../../assets/ig-photo-6.jpg';
+
+const IG_PHOTOS = [igPhoto1, igPhoto2, igPhoto3, igPhoto4, igPhoto5, igPhoto6];
 
 export function Instagram() {
   const posts = [1, 2, 3, 4, 5, 6];
@@ -51,9 +58,10 @@ export function Instagram() {
               whileHover={{ scale: 1.05 }}
               className="group relative aspect-square overflow-hidden cursor-pointer bg-black"
             >
-              <EditableImage
-                contentKey={`ig.${n}.image`}
+              <img
+                src={IG_PHOTOS[index]}
                 alt={`Instagram post ${n}`}
+                draggable={false}
                 className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-70"
               />
 
@@ -61,7 +69,8 @@ export function Instagram() {
               <div
                 className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                 style={{ pointerEvents: isEditMode ? 'none' : 'auto' }}
-              >                <div className="flex items-center gap-2 text-white">
+              >
+                <div className="flex items-center gap-2 text-white">
                   <Heart className="w-6 h-6 fill-white" />
                   <EditableText
                     contentKey={`ig.${n}.likes`}
