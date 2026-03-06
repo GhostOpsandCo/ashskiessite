@@ -119,7 +119,7 @@ export const DEFAULT_CONTENT: Record<string, string> = {
 
   // Footer
   'footer.logo': 'its ashleigh',
-  'footer.copyright': '© 2026 itsashleighxoxo. All rights reserved.',
+  'footer.copyright': '© 2026 itashleighxoxo. All rights reserved.',
 };
 
 const STORAGE_KEY = 'ashleigh-skies-site-content';
